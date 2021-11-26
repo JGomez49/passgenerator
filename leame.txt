@@ -1,0 +1,12 @@
+La aplicacion se arranca:
+    1. Desde la consola de sistema (no la embebida) entrar a la carpeta venv
+    2. Correr <activate>
+    3. Devolverse a la carpeta del proyecto
+    4. Correr <python manage.py runserver>
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/JGomez49/passgenerator.git
+git push -u origin main

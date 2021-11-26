@@ -1,0 +1,45 @@
+
+{% extends 'generator/layout.html' %}
+
+{% block content %}
+
+<h1>Home</h1>
+
+<p>{% lorem 1 b random %}</p>
+
+<div class="col-md-6 offset-md-4">
+
+    <form action="/passwords" class="card card-body border border-success">
+        <h2>Password Generator</h2>
+
+        <label for="length">Select the length of your password</label>
+
+        <Select name="length" id="length" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option value="8">8 characters</option>
+            <option value="12">12 characters</option>
+            <option value="16">16 characters</option>
+            <option value="20">20 characters</option>
+        </Select>
+
+        <div class="form-check form-switch my-2">
+            <label class="form-check-label" for="uppercase">Uppercase</label>
+            <input class="form-check-input" type="checkbox" id="uppercase" name="uppercase"</input>
+        </div>
+
+        <div class="form-check form-switch my-2">
+            <label class="form-check-label" for="special">Special</label>
+            <input class="form-check-input" type="checkbox" id="special" name="special"</input>
+        </div>
+
+        <div class="form-check form-switch my-2">
+            <label class="form-check-label" for="number">Number</label>
+            <input class="form-check-input" type="checkbox" id="number" name="number"</input>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success" id="save" name="save">Generate a new password</button>
+
+    </form>
+</div>
+
+
+{% endblock %}
